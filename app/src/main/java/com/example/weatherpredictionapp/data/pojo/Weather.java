@@ -4,6 +4,8 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Weather implements Parcelable {
+    private Days[] Days;
+
     public static final Creator<Weather> CREATOR = new Creator<Weather>() {
         @Override
         public Weather createFromParcel(Parcel in) {
@@ -15,9 +17,9 @@ public class Weather implements Parcelable {
             return new Weather[size];
         }
     };
-    private Days[] Days;
 
-    protected Weather(Parcel in) {
+    private Weather(Parcel in) {
+        Days = in.createTypedArray(com.example.weatherpredictionapp.data.pojo.Days.CREATOR);
     }
 
     @Override
@@ -27,6 +29,6 @@ public class Weather implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeTypedArray(Days, i);
     }
-
 }
