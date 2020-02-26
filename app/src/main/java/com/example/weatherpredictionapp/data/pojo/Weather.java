@@ -31,4 +31,8 @@ public class Weather implements Parcelable {
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeTypedArray(Days, i);
     }
+
+    public Days[] getDays() {
+        return Days;
+    }
 }

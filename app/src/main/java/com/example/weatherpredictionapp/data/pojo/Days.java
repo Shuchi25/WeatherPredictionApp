@@ -48,6 +48,7 @@ public class Days implements Parcelable {
     private String windgst_max_kmh;
 
     protected Days(Parcel in) {
+        Timeframes = in.createTypedArray(com.example.weatherpredictionapp.data.pojo.Timeframes.CREATOR);
         date = in.readString();
         windgst_max_kts = in.readString();
         sunset_time = in.readString();
@@ -340,6 +341,7 @@ public class Days implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeTypedArray(Timeframes, i);
         parcel.writeString(date);
         parcel.writeString(windgst_max_kts);
         parcel.writeString(sunset_time);

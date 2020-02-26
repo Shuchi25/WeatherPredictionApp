@@ -2,4 +2,6 @@
     <string name="app_name">WeatherPredictionApp</string>
     <string name="loading">Loading</string>
     <string name="retry">Retry</string>
+    <string name="bengaluru">Bengaluru</string>
+    <string name="degree"> Degree</string>
 </resources>

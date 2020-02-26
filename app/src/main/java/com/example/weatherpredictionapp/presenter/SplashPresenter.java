@@ -19,7 +19,6 @@ public class SplashPresenter implements SplashPresenterContract {
 
     public SplashPresenter() {
         compositeDisposable = new CompositeDisposable();
-
     }
 
     @Override
